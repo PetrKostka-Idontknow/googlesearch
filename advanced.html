@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Upřesni dotaz ve vyhledávači Obzor pomocí pokročilého hledání.">
+  <title>Pokročilé hledání – Obzor</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="search-site">
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Obzor – hlavní stránka">
+      <span class="brand-mark" aria-hidden="true">O</span><span>obzor</span>
+    </a>
+    <nav class="main-nav" aria-label="Hlavní navigace">
+      <a href="index.html">Web</a>
+      <a href="images.html">Obrázky</a>
+      <a href="advanced.html" aria-current="page">Pokročilé hledání</a>
+      <a href="formular.html">Expedice</a>
+      <a href="https://petrkostka-idontknow.github.io/portfolio/" target="_blank" rel="noopener noreferrer">Portfolio</a>
+    </nav>
+  </header>
+
+  <main class="search-subpage advanced-page">
+    <section class="advanced-intro">
+      <p class="hero-kicker"><span aria-hidden="true">☷</span> Přesnější cesta k odpovědi</p>
+      <h1>Upřesni své <span>hledání.</span></h1>
+      <p class="subpage-copy">Vyplň jednu nebo více podmínek. Obzor je vlastní rozhraní a hledá výsledky přes Google.</p>
+    </section>
+
+    <form class="advanced-form" action="https://www.google.com/search" method="get">
+      <div class="advanced-field">
+        <label for="all-words">Najdi stránky obsahující všechna tato slova</label>
+        <input id="all-words" type="text" name="as_q" autocomplete="off">
+        <small>Každé zadané slovo musí být na stránce.</small>
+      </div>
+      <div class="advanced-field">
+        <label for="exact-phrase">Přesné slovo nebo frázi</label>
+        <input id="exact-phrase" type="text" name="as_epq" autocomplete="off">
+        <small>Slova budou hledána přesně v uvedeném pořadí.</small>
+      </div>
+      <div class="advanced-field">
+        <label for="any-words">Alespoň jedno z těchto slov</label>
+        <input id="any-words" type="text" name="as_oq" autocomplete="off">
+        <small>Výsledek může obsahovat kterékoli z těchto slov.</small>
+      </div>
+      <div class="advanced-field">
+        <label for="exclude-words">Vynech stránky obsahující tato slova</label>
+        <input id="exclude-words" type="text" name="as_eq" autocomplete="off">
+        <small>Výsledky s těmito slovy budou vyloučeny.</small>
+      </div>
+      <div class="advanced-actions">
+        <a href="index.html">Zpět na jednoduché hledání</a>
+        <button type="submit">Hledat podle podmínek <span aria-hidden="true">↗</span></button>
+      </div>
+    </form>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-links">
+      <a href="https://petrkostka-idontknow.github.io/portfolio/" target="_blank" rel="noopener noreferrer">Portfolio</a>
+      <a href="https://github.com/PetrKostka-Idontknow/googlesearch/blob/main/citace.md">Citace a zdroje</a>
+    </div>
+    <nav class="validator-links" aria-label="Validace stránky">
+      <a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fraw.githubusercontent.com%2FPetrKostka-Idontknow%2Fgooglesearch%2Fmain%2Fadvanced.html">Validovat HTML</a>
+      <a href="https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fraw.githubusercontent.com%2FPetrKostka-Idontknow%2Fgooglesearch%2Fmain%2Fstyle.css">Validovat CSS</a>
+    </nav>
+  </footer>
+</body>
+</html>

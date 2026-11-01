@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Ukázka různých HTML formulářových prvků v projektu Obzor.">
+  <title>Webová expedice – Obzor</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="search-site">
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Obzor – hlavní stránka">
+      <span class="brand-mark" aria-hidden="true">O</span><span>obzor</span>
+    </a>
+    <nav class="main-nav" aria-label="Hlavní navigace">
+      <a href="index.html">Web</a>
+      <a href="images.html">Obrázky</a>
+      <a href="advanced.html">Pokročilé hledání</a>
+      <a href="formular.html" aria-current="page">Expedice</a>
+      <a href="https://petrkostka-idontknow.github.io/portfolio/" target="_blank" rel="noopener noreferrer">Portfolio</a>
+    </nav>
+  </header>
+
+  <main class="form-page">
+    <div class="page-heading">
+      <p class="eyebrow">Obzor · interaktivní ukázka</p>
+      <h1>Sestav si webovou expedici <span aria-hidden="true">✦</span></h1>
+      <p>Vyber si, jak by vypadala tvoje ideální výprava za odpověďmi. Tohle je hravá přehlídka formulářových prvků — údaje se nikam neodesílají.</p>
+      <div class="expedition-route" role="group" aria-label="Tři kroky expedice">
+        <span><b>01</b> Průzkumník</span>
+        <span aria-hidden="true">···</span>
+        <span><b>02</b> Výbava</span>
+        <span aria-hidden="true">···</span>
+        <span><b>03</b> Cíl výpravy</span>
+      </div>
+    </div>
+
+    <form class="demo-form" action="#" method="get" enctype="multipart/form-data">
+      <fieldset>
+        <legend><span class="legend-icon" aria-hidden="true">🧭</span> Průzkumník</legend>
+        <div class="form-grid">
+          <div class="field">
+            <label for="full-name">Krycí jméno</label>
+            <input id="full-name" name="jmeno" type="text" placeholder="Jan Novák" autocomplete="name">
+          </div>
+          <div class="field">
+            <label for="email">Kontaktní e-mail</label>
+            <input id="email" name="email" type="email" placeholder="jan@example.cz" autocomplete="email">
+          </div>
+          <div class="field">
+            <label for="password">Tajný kód výpravy</label>
+            <input id="password" name="heslo" type="password" autocomplete="new-password">
+          </div>
+          <div class="field">
+            <label for="phone">Telefon pro případ objevu</label>
+            <input id="phone" name="telefon" type="tel" placeholder="+420 123 456 789" autocomplete="tel">
+          </div>
+          <div class="field">
+            <label for="website">Základní tábor na webu</label>
+            <input id="website" name="web" type="url" placeholder="https://example.cz">
+          </div>
+          <div class="field">
+            <label for="search-keyword">Klíčové slovo expedice</label>
+            <input id="search-keyword" name="klicove-slovo" type="search" placeholder="např. vesmír">
+          </div>
+          <div class="field">
+            <label for="departure-date">Datum odchodu</label>
+            <input id="departure-date" name="datum" type="date">
+          </div>
+          <div class="field">
+            <label for="departure-time">Čas srazu</label>
+            <input id="departure-time" name="cas" type="time">
+          </div>
+          <div class="field">
+            <label for="departure-month">Měsíc výpravy</label>
+            <input id="departure-month" name="mesic" type="month">
+          </div>
+          <div class="field">
+            <label for="departure-week">Týdenní plán</label>
+            <input id="departure-week" name="tyden" type="week">
+          </div>
+          <div class="field field-wide">
+            <label for="meeting-time">Přesný čas startu</label>
+            <input id="meeting-time" name="start" type="datetime-local">
+          </div>
+          <div class="field">
+            <label for="quantity">Počet nalezených stop (1–100)</label>
+            <input id="quantity" name="pocet" type="number" min="1" max="100" value="10">
+          </div>
+          <div class="field">
+            <label for="favorite-color">Barva výpravy</label>
+            <input id="favorite-color" name="barva" type="color" value="#4285f4">
+          </div>
+          <div class="field field-wide">
+            <label for="animal">Průvodce výpravou (zkus začít psát)</label>
+            <input id="animal" name="pruvodce" type="text" list="animal-list" placeholder="Vyber si zvířecího průvodce">
+            <datalist id="animal-list">
+              <option value="Sova"></option>
+              <option value="Liška"></option>
+              <option value="Robot"></option>
+              <option value="Malý drak"></option>
+            </datalist>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend><span class="legend-icon" aria-hidden="true">🎒</span> Výbava a plán</legend>
+        <div class="form-grid">
+          <div class="field">
+            <label for="category">Jaký terén prozkoumáme?</label>
+            <select id="category" name="kategorie">
+              <option value="">Vyber terén</option>
+              <optgroup label="Známé oblasti">
+                <option value="web">Webová džungle</option>
+                <option value="images">Obrazová jeskyně</option>
+              </optgroup>
+              <optgroup label="Nové objevy">
+                <option value="news">Zpravodajské hory</option>
+                <option value="videos">Video oceán</option>
+              </optgroup>
+            </select>
+          </div>
+          <div class="field">
+            <label for="languages">Řeči, kterým rozumíš (více možností)</label>
+            <select id="languages" name="jazyky" multiple size="4">
+              <option value="cs">Čeština</option>
+              <option value="en">Angličtina</option>
+              <option value="sk">Slovenština</option>
+              <option value="de">Němčina</option>
+            </select>
+          </div>
+          <div class="field field-wide">
+            <div class="range-label">
+              <label for="search-depth">Jak hluboko pátrat?</label>
+              <span><output id="depth-value" for="search-depth">10</output> stop</span>
+            </div>
+            <input id="search-depth" name="hloubka" type="range" min="5" max="50" value="10">
+          </div>
+        </div>
+        <div class="choice-group">
+          <p class="group-label">Vyber si parťáka (jedna možnost)</p>
+          <label class="choice"><input type="radio" name="typ" value="sova" checked> Moudrá sova — hledá stopy v knihách</label>
+          <label class="choice"><input type="radio" name="typ" value="robot"> Robot R2-Hledej — skenuje rychlostí světla</label>
+          <label class="choice"><input type="radio" name="typ" value="lisak"> Lišák — najde i dobře schované odpovědi</label>
+        </div>
+        <div class="choice-group">
+          <p class="group-label">Co zabalíš do batohu? (můžeš vybrat více)</p>
+          <label class="choice"><input type="checkbox" name="vybava" value="mapa"> Papírovou mapu internetu</label>
+          <label class="choice"><input type="checkbox" name="vybava" value="lupa"> Zvětšovací lupu na detaily</label>
+          <label class="choice"><input type="checkbox" name="vybava" value="snack"> Sušenky na dlouhé hledání</label>
+        </div>
+        <div class="field field-wide upload-field">
+          <label for="avatar">Přidej obrázek své výpravy (volitelné)</label>
+          <input id="avatar" name="soubor" type="file" accept="image/*">
+        </div>
+        <div class="meter-card">
+          <span>Dosavadní zásoby energie</span>
+          <meter min="0" max="100" low="25" high="75" optimum="90" value="78">78 %</meter>
+          <strong>78 %</strong>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend><span class="legend-icon" aria-hidden="true">📍</span> Cíl výpravy</legend>
+        <div class="field">
+          <label for="message">Jakou záhadu chceš vyřešit?</label>
+          <textarea id="message" name="poznamka" rows="5" maxlength="400" placeholder="Třeba: Proč mají plameňáci růžovou barvu?"></textarea>
+          <span class="field-hint">Popiš svůj cíl, stopu nebo otázku. (max. 400 znaků)</span>
+        </div>
+        <div class="button-row">
+          <button class="search-button primary-button" type="submit">Vyrazit na expedici ✨</button>
+          <button class="search-button" type="reset">Začít znovu</button>
+          <button class="text-button" type="button">Zavolat sovu</button>
+        </div>
+        <p class="form-feedback" id="form-feedback" aria-live="polite"></p>
+      </fieldset>
+    </form>
+    <a class="secondary-link back-link" href="index.html">← Zpět na vyhledávání</a>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-links">
+      <a href="https://petrkostka-idontknow.github.io/portfolio/" target="_blank" rel="noopener noreferrer">Portfolio</a>
+      <a href="https://github.com/PetrKostka-Idontknow/googlesearch/blob/main/citace.md">Citace a zdroje</a>
+    </div>
+    <nav class="validator-links" aria-label="Validace stránky">
+      <a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fraw.githubusercontent.com%2FPetrKostka-Idontknow%2Fgooglesearch%2Fmain%2Fformular.html">Validovat HTML</a>
+      <a href="https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fraw.githubusercontent.com%2FPetrKostka-Idontknow%2Fgooglesearch%2Fmain%2Fstyle.css">Validovat CSS</a>
+    </nav>
+  </footer>
+  <script src="form-demo.js"></script>
+</body>
+</html>

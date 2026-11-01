@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Obrazový průzkumník Obzor – hledej obrázky na webu.">
+  <title>Obrázky – Obzor</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="search-site">
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Obzor – hlavní stránka">
+      <span class="brand-mark" aria-hidden="true">O</span><span>obzor</span>
+    </a>
+    <nav class="main-nav" aria-label="Hlavní navigace">
+      <a href="index.html">Web</a>
+      <a href="images.html" aria-current="page">Obrázky</a>
+      <a href="advanced.html">Pokročilé hledání</a>
+      <a href="formular.html">Expedice</a>
+      <a href="https://petrkostka-idontknow.github.io/portfolio/" target="_blank" rel="noopener noreferrer">Portfolio</a>
+    </nav>
+  </header>
+
+  <main class="search-subpage image-page">
+    <section class="search-panel" aria-labelledby="page-title">
+      <p class="hero-kicker"><span aria-hidden="true">▧</span> Obrazový průzkumník</p>
+      <h1 id="page-title">Najdi svět <span>v obrazech.</span></h1>
+      <p class="subpage-copy">Zadej téma a vydej se za vizuální inspirací.</p>
+      <form class="obzor-search" action="https://www.google.com/search" method="get" role="search">
+        <input type="hidden" name="tbm" value="isch">
+        <label class="visually-hidden" for="image-query">Jaký obrázek hledáš?</label>
+        <span class="obzor-search-icon" aria-hidden="true">⌕</span>
+        <input id="image-query" type="search" name="q" placeholder="např. polární záře nad horami" required>
+        <button type="submit" class="search-submit">Hledat obrázky <span aria-hidden="true">↗</span></button>
+      </form>
+      <p class="search-note">Obzor je vlastní rozhraní. Obrázky poskytuje Vyhledávání Google.</p>
+    </section>
+    <a class="back-home" href="index.html">← Zpět na hlavní hledání</a>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-links">
+      <a href="https://petrkostka-idontknow.github.io/portfolio/" target="_blank" rel="noopener noreferrer">Portfolio</a>
+      <a href="https://github.com/PetrKostka-Idontknow/googlesearch/blob/main/citace.md">Citace a zdroje</a>
+    </div>
+    <nav class="validator-links" aria-label="Validace stránky">
+      <a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fraw.githubusercontent.com%2FPetrKostka-Idontknow%2Fgooglesearch%2Fmain%2Fimages.html">Validovat HTML</a>
+      <a href="https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fraw.githubusercontent.com%2FPetrKostka-Idontknow%2Fgooglesearch%2Fmain%2Fstyle.css">Validovat CSS</a>
+    </nav>
+  </footer>
+</body>
+</html>
